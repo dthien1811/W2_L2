@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body {
+      background-color: #f8f9fa;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: auto;
+      margin-top: 50px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    label {
+      font-weight: bold;
+    }
+    #nameForm {
+      display: none;
+    }
+
+    #fullNameHelp {
+      font-size: 80%;
+    }
+  </style>
+  <title>Điền Thông Tin Vé Máy Bay</title>
+</head>
+<body>
+
+<div class="container">
+  <h2 class="text-center mb-4">Điền Thông Tin Vé Máy Bay</h2>
+  <form>
+    <div class="form-group">
+        <label for="fullName">Họ và Tên:</label>
+        <div class="input-group">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="fullNameHelp">mì chột số</span>
+              </div>
+          <input type="text" class="form-control" id="fullName" placeholder="Nhập họ và tên">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="fullNameHelp">vnd</span>
+          </div>
+        </div>
+      </div>
+
+    <div class="form-group">
+      <label for="address">Địa Chỉ:</label>
+      <input type="text" class="form-control" id="address" placeholder="Nhập địa chỉ">
+    </div>
+
+    <div class="form-group">
+      <label for="from">Đi từ Đâu:</label>
+      <select class="form-control" id="from">
+        <option>Hà Nội</option>
+        <option>TP.Hồ Chí Minh</option>
+        <option>Đà Nẵng</option>
+        <!-- Thêm các thành phố khác tùy theo cần -->
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="to">Đến Đâu:</label>
+      <select class="form-control" id="to">
+        <option>Hà Nội</option>
+        <option>TP.Hồ Chí Minh</option>
+        <option>Đà Nẵng</option>
+        <!-- Thêm các thành phố khác tùy theo cần -->
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label>Chọn hình thức:</label>
+      <div class="form-check">
+        <input type="checkbox" class="form-check-input" id="roundTrip" name="tripType">
+        <label class="form-check-label" for="roundTrip">Đi</label>
+        
+      </div>
+      <div class="form-check">
+        <input type="checkbox" class="form-check-input" id="roundTrip" name="tripType">
+        <label class="form-check-label" for="roundTrip">Về</label>
+        
+      </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Đặt Vé</button>
+  </form>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+    $(document).ready(function() {
+      $("#openFormButton").click(function() {
+        $("#nameForm").toggle();
+      });
+    });
+  </script>
+</body>
+</html>
